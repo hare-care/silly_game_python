@@ -60,16 +60,12 @@ def check_guess(user_guess, correct_answer):
 def game_loop(level):
     answer = random.randrange(10**level)
     # See what the answer is supposed to be
-    print(answer)
     if (level == 1):
         print("Silly game!")
     else:
         print(f"Level {level}!")
     guess = int(input(f"Guess a number between 0 and {10**level}: "))
-    tic = time.perf_counter()
     result = check_guess(guess, answer)
-    toc = time.perf_counter()
-    print(f"time spent was {toc-tic}")
     return result
 
 def main():
